@@ -1,0 +1,520 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    background: #f8fafc;
+    overflow: hidden;
+}
+
+/* Header */
+.top-header {
+    height: 65px;
+    background: #EDEDF9;
+    border-bottom: 1px solid #d8dee8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 43px;
+}
+
+/* Logo */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+/* Icon */
+.logo-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon img {
+    width: 28px;
+    height: 28px;
+    display: block;
+}
+
+/* Logo Text */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-text h2 {
+    color: #1261d6;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 18px;
+    margin: 0;
+}
+
+.logo-text span {
+    display: block;
+    font-size: 8px;
+    color: #777f8b;
+    margin-top: 2px;
+}
+
+.main-content {
+    padding: 12px 33px 30px;
+    background: #f8fafc;
+}
+
+.welcome-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.welcome-section h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #191B23;
+    margin-bottom: 3px;
+}
+
+.welcome-section p {
+    font-size: 16px;
+    color: #434655;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.date-box {
+    height: 38px;
+    width: 155px;
+    border-radius: 20px;
+    background: #e9efff;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+}
+
+.date-box input {
+    width: 115px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #1758c7;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.date-box input::placeholder {
+    color: #004AC6;
+    opacity: 1;
+}
+
+.date-box span {
+    font-size: 13px;
+    color: #5b6472;
+}
+
+.new-task-btn {
+
+    height: 38px;
+    width: 121px;
+    border: none;
+    border-radius: 8px;
+    background: #0756c9;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.new-task-btn:hover {
+    background: #0649aa;
+    transform: translateY(-1px);
+}
+
+.stats-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.stat-card {
+    width: 317px;
+    height: 80px;
+    background: #ffffff;
+    border: 1px solid #d1d8e3;
+    border-radius: 8px;
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-card p {
+    font-size: 11px;
+    color: #5d6675;
+    margin-bottom: 4px;
+}
+
+.stat-card h2 {
+    font-size: 25px;
+    line-height: 1;
+    color: #20242c;
+}
+
+.stat-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.stat-icon.blue {
+
+    background: #e8f0ff;
+    color: #1761d1;
+}
+
+.stat-icon.orange {
+
+    background: #fff0e7;
+    color: #c25a18;
+}
+
+.stat-icon.green {
+    background: #e4f8f1;
+    color: #0baf83;
+}
+
+.section-title {
+    font-size: 17px;
+    margin: 0 0 13px 2px;
+    color: #20242c;
+}
+
+.task-card {
+    min-height: 103px;
+    background: #ffffff;
+    border: 1px solid #d1d8e3;
+    border-radius: 8px;
+    margin-bottom: 13px;
+    padding: 16px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    transition: 0.2s;
+}
+
+.task-card:hover {
+    border-color: #b8c5d8;
+    box-shadow: 0 3px 10px rgba(30, 50, 80, 0.05);
+}
+
+.task-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.task-checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #c0c9d7;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.task-checkbox:checked {
+    background: #49b97e;
+    border-color: #49b97e;
+}
+
+.task-details h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #242832;
+    margin-bottom: 7px;
+}
+
+.task-details p {
+
+    font-size: 11px;
+    color: #566071;
+    margin-bottom: 12px;
+}
+
+.task-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 10px;
+    color: #697386;
+}
+
+.status {
+
+    padding: 4px 10px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+}
+
+.status.pending {
+
+    color: #b84d0b;
+
+    background: #fff0e8;
+
+    border: 2px solid #f6d4c1;
+}
+
+.status.completed {
+
+    color: #0ca47c;
+    background: #e7f8f2;
+
+    border: 2px solid #c7eee1;
+}
+
+.task-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.task-actions button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #687386;
+    border-radius: 6px;
+}
+
+.task-actions button:hover {
+    background: #f1f4f8;
+    color: #1761d1;
+}
+
+/* Add new Task Model */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000033;
+    backdrop-filter: blur(5px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+
+/* Popup box */
+.task-modal {
+    width: 470px;
+    background: white;
+    border-radius: 9px;
+    padding: 16px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Heading */
+
+.task-modal h2 {
+    margin: 0 0 17px 0;
+    font-size: 17px;
+    font-weight: 700;
+    color: #20242c;
+}
+/* Labelss */
+.task-modal label {
+    display: block;
+    font-size: 11px;
+    color: #4b5563;
+    margin-bottom: 5px;
+}
+
+
+/* Inputs */
+.task-modal input,
+.task-modal textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 9px 10px;
+    font-size: 11px;
+    color: #333;
+    outline: none;
+    margin-bottom: 12px;
+    font-family: Arial, sans-serif;
+}
+
+
+.task-modal input {
+    height: 33px;
+}
+.task-modal textarea {
+    height: 72px;
+    resize: none;
+}
+
+
+/* Placeholder */
+.task-modal input::placeholder,
+.task-modal textarea::placeholder {
+    color: #7b8494;
+}
+
+
+/* Focus */
+.task-modal input:focus,
+.task-modal textarea:focus {
+    border-color: #1769d1;
+}
+
+/* Add Task Button */
+.add-task-btn {
+    width: 100%;
+    height: 38px;
+    border: none;
+    border-radius: 6px;
+    background: #0757c9;
+    color: white;
+    font-size: 11px;
+    cursor: pointer;
+    margin-top: 1px;
+}
+
+.add-task-btn:hover {
+    background: #064cae;
+}
+.delete-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+/* Popup */
+
+.delete-modal {
+    width: 347px;
+    background: white;
+    border-radius: 9px;
+    padding: 22px 16px 16px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+/* Trash Icon */
+
+.delete-icon {
+    width: 48px;
+    height: 48px;
+
+    margin: 0 auto 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #df5050;
+
+    font-size: 38px;
+}
+/* Heading */
+
+.delete-modal h2 {
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #20242c;
+
+    margin-bottom: 22px;
+}
+/* Buttons */
+
+.delete-actions {
+    display: flex;
+    gap: 16px;
+}
+/* Cancel */
+
+.cancel-delete,
+.confirm-delete {
+    width: 50%;
+    height: 40px;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+/* Cancel Button */
+
+.cancel-delete {
+    background: #e5e5e7;
+    color: #20242c;
+}
+/* Delete Button */
+
+.confirm-delete {
+    background: #df5050;
+    color: white;
+}
+
+
+.cancel-delete:hover {
+    background: #d9d9dc;
+}
+
+.confirm-delete:hover {
+    background: #cc4141;
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>TaskFlow Dashboard</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Header -->
+        <header class="top-header">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <img src="images/correct_icon.png">
+                </div>
+                <div class="logo-text">
+                    <h2>TaskFlow</h2>
+                    <span>Stay Productive</span>
+                </div>
+            </div>
+            <div class="profile">
+                <img src="images\Trailing Actions.png" alt="Profile">
+            </div>
+
+
+        </header>
+        <main class="main-content">
+            <section class="welcome-section">
+                <div>
+                    <h1>Morning, Shravani 👋</h1>
+                    <p>Here's a snapshot of your workspace today.</p>
+                </div>
+                <div class="header-actions">
+                    <div class="date-box">
+                        <input type="date" id="todayDate">
+
+                    </div>
+                    <button class="new-task-btn"> New Task</button>
+                </div>
+            </section>
+
+            <section class="stats-container">
+                <!-- Total Task -->
+                <div class="stat-card">
+                    <div>
+                        <p>Total Task</p>
+                        <h2 id="total-count">0</h2>
+                    </div>
+                    <div class="stat-icon blue">
+                        ▣
+                    </div>
+                </div>
+                <!-- Pending Task -->
+                <div class="stat-card">
+                    <div>
+                        <p>Pending Task</p>
+                        <h2 id="pending-count">0</h2>
+                    </div>
+                    <div class="stat-icon orange">
+                        ....
+                    </div>
+                </div>
+                <!-- Completed Task -->
+                <div class="stat-card">
+                    <div>
+                        <p>Completed Task</p>
+                        <h2 id="completed-count">0</h2>
+                    </div>
+                    <div class="stat-icon green">
+                        ✓
+                    </div>
+                </div>
+            </section>
+
+            <section class="task-section">
+                <h2 class="section-title">Active Tasks</h2>
+                <!-- Task : 1 -->
+                <div class="task-card">
+
+                    <div class="task-left">
+
+                        <input type="checkbox" class="task-checkbox">
+
+                        <div class="task-details">
+                            <h3>Project Setup</h3>
+
+                            <p>
+                                Create the project structure, folders, and initialize the application.
+                            </p>
+
+                            <div class="task-meta">
+                                <span class="date-text">
+                                    ▣ 2026-09-08 ↔ 2026-09-10
+                                </span>
+
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right side icons -->
+                    <div class="task-actions">
+
+                        <button title="Edit">
+                            <i class="fa-sharp fa-solid fa-pen"></i>
+                        </button>
+
+                        <button title="Delete">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+                <!-- Task : 2 -->
+                <div class="task-card">
+
+                    <div class="task-left">
+
+                        <input type="checkbox" class="task-checkbox">
+
+                        <div class="task-details">
+                            <h3>Project Setup</h3>
+
+                            <p>
+                                Create the project structure, folders, and initialize the application.
+                            </p>
+
+                            <div class="task-meta">
+                                <span class="date-text">
+                                    ▣ 2026-09-08 ↔ 2026-09-10
+                                </span>
+
+                                <span class="status completed">
+                                    completed
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right side icons -->
+                    <div class="task-actions">
+
+                        <button title="Edit">
+                            <i class="fa-sharp fa-solid fa-pen"></i>
+                        </button>
+
+                        <button title="Delete">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Add new task Pop-up -->
+    <div class="modal-overlay" id="taskModal">
+
+        <div class="task-modal">
+
+            <h2 id="taskModalTitle">Add New Task</h2>
+
+            <label>Task title</label>
+            <input type="text" id="taskTitleInput" placeholder="e.g. Design Homepage">
+
+            <label>Description</label>
+            <textarea id="taskDescriptionInput" placeholder="Add some context..."></textarea>
+
+            <label>Start Date</label>
+            <input type="date" id="startDateInput">
+
+            <label>Due Date</label>
+            <input type="date" id="dueDateInput">
+
+            <button class="add-task-btn" id="saveTaskBtn">
+                Add Task
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Delete Confirmation Popup -->
+
+    <div class="delete-overlay" id="deleteModal">
+        <div class="delete-modal">
+            <div class="delete-icon">
+                <i class="fa-solid fa-trash"></i>
+            </div>
+
+            <h2>Are you sure you want delete<br>this item?</h2>
+
+            <div class="delete-actions">
+                <button class="cancel-delete" id="cancelDelete">cancel</button>
+                <button class="confirm-delete" id="confirmDelete">Yes, Delete</button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+
+</body>
+
+</html>
