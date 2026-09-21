@@ -9,6 +9,7 @@ import Clock from './Clock'
 import InlineStyle from './InlineStyling'
 import ExternalStyle from './ExternalStyle'
 import DerivedState from './DerivedState'
+import User from './ObjectState'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -24,6 +25,8 @@ createRoot(document.getElementById('root')).render(
     <ExternalStyle />
 
     <InlineStyle /> */}
-    <DerivedState/>
+    {/* <DerivedState/> */}
+
+    <User/>
   </StrictMode>,
 )
