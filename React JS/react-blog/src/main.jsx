@@ -8,6 +8,7 @@ import RadioButton from './RadioButton'
 import Clock from './Clock'
 import InlineStyle from './InlineStyling'
 import ExternalStyle from './ExternalStyle'
+import DerivedState from './DerivedState'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -18,8 +19,11 @@ createRoot(document.getElementById('root')).render(
 
     {/* <Clock /> */}
 
-    <ExternalStyle/>
+    {/* <InputRef />
 
-    <InlineStyle/>
+    <ExternalStyle />
+
+    <InlineStyle /> */}
+    <DerivedState/>
   </StrictMode>,
 )
