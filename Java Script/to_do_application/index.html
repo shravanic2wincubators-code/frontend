@@ -25,8 +25,6 @@
             <div class="profile">
                 <img src="images\Trailing Actions.png" alt="Profile">
             </div>
-
-
         </header>
         <main class="main-content">
             <section class="welcome-section">
@@ -75,91 +73,60 @@
                     </div>
                 </div>
             </section>
-
             <section class="task-section">
+
                 <h2 class="section-title">Active Tasks</h2>
-                <!-- Task : 1 -->
-                <div class="task-card">
 
-                    <div class="task-left">
+                <template id="taskTemplate">
 
-                        <input type="checkbox" class="task-checkbox">
+                    <div class="task-card">
 
-                        <div class="task-details">
-                            <h3>Project Setup</h3>
+                        <div class="task-left">
 
-                            <p>
-                                Create the project structure, folders, and initialize the application.
-                            </p>
+                            <input type="checkbox" class="task-checkbox">
 
-                            <div class="task-meta">
-                                <span class="date-text">
-                                    ▣ 2026-09-08 ↔ 2026-09-10
-                                </span>
+                            <div class="task-details">
 
-                                <span class="status pending">
-                                    Pending
-                                </span>
+                                <h3 class="task-title">
+                                    Task Title
+                                </h3>
+
+                                <p class="task-description">
+                                    Task Description
+                                </p>
+
+                                <div class="task-meta">
+
+                                    <span class="date-text">
+                                        ▣ 2026-10-01 ↔ 2026-10-05
+                                    </span>
+
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+
+                                </div>
+
                             </div>
+
+                        </div>
+
+                        <div class="task-actions">
+
+                            <button class="edit-btn" title="Edit">
+                                <i class="fa-sharp fa-solid fa-pen"></i>
+                            </button>
+
+                            <button class="delete-btn" title="Delete">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
                         </div>
 
                     </div>
 
-                    <!-- Right side icons -->
-                    <div class="task-actions">
+                </template>
 
-                        <button title="Edit">
-                            <i class="fa-sharp fa-solid fa-pen"></i>
-                        </button>
-
-                        <button title="Delete">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-
-                    </div>
-
-                </div>
-                <!-- Task : 2 -->
-                <div class="task-card">
-
-                    <div class="task-left">
-
-                        <input type="checkbox" class="task-checkbox">
-
-                        <div class="task-details">
-                            <h3>Project Setup</h3>
-
-                            <p>
-                                Create the project structure, folders, and initialize the application.
-                            </p>
-
-                            <div class="task-meta">
-                                <span class="date-text">
-                                    ▣ 2026-09-08 ↔ 2026-09-10
-                                </span>
-
-                                <span class="status completed">
-                                    completed
-                                </span>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Right side icons -->
-                    <div class="task-actions">
-
-                        <button title="Edit">
-                            <i class="fa-sharp fa-solid fa-pen"></i>
-                        </button>
-
-                        <button title="Delete">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-
-                    </div>
-
-                </div>
             </section>
         </main>
     </div>
@@ -176,6 +143,8 @@
 
             <label>Description</label>
             <textarea id="taskDescriptionInput" placeholder="Add some context..."></textarea>
+            <!-- <label>Email</label>
+            <input type="email" id="taskEmailInput" placeholder="e.g. shravani@gmail.com"> -->
 
             <label>Start Date</label>
             <input type="date" id="startDateInput">
@@ -190,24 +159,33 @@
         </div>
 
     </div>
-
-    <!-- Delete Confirmation Popup -->
-
     <div class="delete-overlay" id="deleteModal">
+
         <div class="delete-modal">
+
             <div class="delete-icon">
                 <i class="fa-solid fa-trash"></i>
             </div>
 
-            <h2>Are you sure you want delete<br>this item?</h2>
+            <h2>
+                Are you sure you want delete<br>
+                this item?
+            </h2>
 
             <div class="delete-actions">
-                <button class="cancel-delete" id="cancelDelete">cancel</button>
-                <button class="confirm-delete" id="confirmDelete">Yes, Delete</button>
+                <button class="cancel-delete" id="cancelDelete">
+                    cancel
+                </button>
+                <button class="confirm-delete" id="confirmDelete">
+                    Yes, Delete
+                </button>
             </div>
+
         </div>
 
-        <script src="script.js"></script>
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
 

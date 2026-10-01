@@ -8,7 +8,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
 }
-
 .main-container {
     width: 100%;
     max-width: 100%;
@@ -132,6 +131,7 @@ body {
     font-size: 13px;
     color: #5b6472;
 }
+
 
 .new-task-btn {
 
